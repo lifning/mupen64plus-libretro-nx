@@ -25,8 +25,8 @@ void genode_free_secondary_stack(void *stack);
     #include "x86.c"
   #elif defined __amd64__
     #include "amd64.c"
-  #elif defined _ARCH_PPC
-    #include "ppc.c"
+//  #elif defined _ARCH_PPC && !defined(__powerpc64le__)
+//    #include "ppc.c"
   #elif defined(__aarch64__)
     #include "aarch64.c"
   #elif defined(PSP)

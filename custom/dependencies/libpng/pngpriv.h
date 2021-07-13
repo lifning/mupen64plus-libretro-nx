@@ -194,7 +194,7 @@
 
 #ifndef PNG_POWERPC_VSX_OPT
 #  if defined(__PPC64__) && defined(__ALTIVEC__) && defined(__VSX__)
-#     define PNG_POWERPC_VSX_OPT 2
+//#     define PNG_POWERPC_VSX_OPT 2
 #  else
 #     define PNG_POWERPC_VSX_OPT 0
 #  endif

@@ -12,7 +12,7 @@ SYSTEM_ZLIB ?= 0
 
 HAVE_LTCG ?= 0
 DYNAFLAGS :=
-INCFLAGS  :=
+INCFLAGS  := -DNO_WARN_X86_INTRINSICS -DNO_ASM
 COREFLAGS :=
 CPUFLAGS  :=
 GLFLAGS   :=
@@ -72,6 +72,8 @@ ifeq ($(ARCH), $(filter $(ARCH), i386 i686))
    PIC = 0
 else ifeq ($(ARCH), $(filter $(ARCH), arm))
    WITH_DYNAREC = arm
+else ifeq ($(ARCH), $(filter $(ARCH), ppc))
+   WITH_DYNAREC =
 endif
 
 TARGET_NAME := mupen64plus_next
